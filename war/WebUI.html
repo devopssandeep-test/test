@@ -1,0 +1,107 @@
+<<!DOCTYPE html>
+<!-- The DOCTYPE declaration above will set the    -->
+<!-- browser's rendering engine into               -->
+<!-- "Standards Mode". Replacing this declaration  -->
+<!-- with a "Quirks Mode" doctype may lead to some -->
+<!-- differences in layout.                        -->
+
+<html>
+  <head>
+  	<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    
+    <meta name="gwt:property" content="locale=<%=request.getLocale()%>">
+    <!--                                                               -->
+    <!-- Consider inlining CSS to reduce the number of requested files -->
+    <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="WebUI.css">
+    <link rel="icon" href="images/common/favicon.ico" type="image/x-icon">
+
+    <!--                                           -->
+    <!-- Any title is fine                         -->
+    <!--                                           -->
+    <title>SRDM</title>
+	<script>
+		var isomorphicDir = "webui/sc/";
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for ( var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ')
+					c = c.substring(1, c.length);
+				if (c.indexOf(nameEQ) == 0)
+					return c.substring(nameEQ.length, c.length);
+			}
+			return null;
+		}
+	
+		// Determine what skin file to load
+		var currentSkin = readCookie('skin_name');
+		if (currentSkin == null) {
+			currentSkin = "Enterprise";
+		}
+	</script>
+<!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+    <!--<script>var isomorphicDir = "webui/sc/";</script>
+	-->
+	<!--include the SC Core API-->
+<script src=webui/sc/modules/ISC_Core.js></script>
+
+<!--include SmartClient -->
+<!--<script type="text/javascript">document.getElementById('loadingMsg').innerHTML = 'Loading UI Components...';</script>-->
+<script src='webui/sc/modules/ISC_Foundation.js'></script>
+<script src='webui/sc/modules/ISC_Containers.js'></script>
+<script src='webui/sc/modules/ISC_Grids.js'></script>
+<script src='webui/sc/modules/ISC_Forms.js'></script>
+<script src='webui/sc/modules/ISC_RichTextEditor.js'></script>
+<script src='webui/sc/modules/ISC_Calendar.js'></script>
+<!--<script type="text/javascript">document.getElementById('loadingMsg').innerHTML = 'Loading Data API...';</script>-->
+<script src='webui/sc/modules/ISC_DataBinding.js'></script>
+<script src='webui/sc/modules/ISC_Drawing.js'></script>
+<script src='webui/sc/modules/ISC_Charts.js'></script>
+	
+	<script type="text/javascript">
+	document.write("<" + "script src=webui/sc/skins/"
+			+ currentSkin + "/load_skin.js><"+"/script>");
+</script>
+    <script type="text/javascript" language="javascript" src="webui/webui.nocache.js"></script><!--
+    
+ <script language=javascript>
+		document.onkeydown = function() {
+
+		if (window.event && window.event.keyCode == 116) { // Capture and remap F5
+			alert("To refresh this window, click on header!!");
+			window.event.keyCode = 505;
+		}
+
+		if (window.event && window.event.keyCode == 505) { // New action for F5
+			return false;
+			// Must return false or the browser will refresh anyway
+		}
+	}
+</script> 
+  --></head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body>
+
+    <!-- OPTIONAL: include this if you want history support -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+    
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+  </body>
+</html>

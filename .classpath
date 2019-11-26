@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="../libs/gwt/gwt-dev.jar"/>
+	<classpathentry kind="lib" path="../libs/gwt/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="../libs/gwt/gwt-servlet-deps.jar"/>
+	<classpathentry kind="lib" path="../libs/gwt/gwt-user.jar"/>
+	<classpathentry kind="lib" path="../libs/gwt/gwtx-1.5.2.jar"/>
+	<classpathentry kind="lib" path="../libs/gwt/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="../libs/gwt/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="lib" path="../libs/json/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/aopalliance.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/gin-1.5.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/guice-assistedinject-3.0.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/gwt-user.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/javax.inject.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/piriti-dev-0.8.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/piriti-user-0.8.jar"/>
+	<classpathentry kind="lib" path="../libs/piriti/totoe-0.4.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/commons-beanutils-1.0.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/commons-jxpath-1.3.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/isc-jakarta-oro-2.0.6.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/isomorphic_contentexport.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/isomorphic_core_rpc.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/smartgwt.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/smartgwtpro.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/smartgwt-skins.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/velocity-1.7.jar"/>
+	<classpathentry kind="lib" path="../libs/smartgwt/xbean.jar"/>
+	<classpathentry kind="lib" path="../libs/ssdi-themes/ssdi-skins.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/webuilibrary"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

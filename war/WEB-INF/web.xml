@@ -1,0 +1,47 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	      xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	      version="2.4">
+
+    <!-- The IDACall servlet handles all Built-in DataSource operations -->
+    <servlet>
+        <servlet-name>IDACall</servlet-name>
+        <servlet-class>com.isomorphic.servlet.IDACall</servlet-class>
+    </servlet>
+
+    <!-- RPCManager uses this URL by default for Built-in DataSource operations -->
+    <servlet-mapping>
+        <servlet-name>IDACall</servlet-name>
+        <url-pattern>/webui/sc/IDACall/*</url-pattern>
+    </servlet-mapping>
+    
+	<filter>
+		<filter-name>StatusReportFilter</filter-name>
+		<filter-class>srdm.cloud.server.filter.StatusReportFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>StatusReportFilter</filter-name>
+		<url-pattern>/WebUI.jsp</url-pattern>
+	</filter-mapping>
+
+    <servlet>
+        <servlet-name>ExportServlet</servlet-name>
+        <servlet-class>srdm.cloud.server.export.ExportServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ExportServlet</servlet-name>
+        <url-pattern>/server/Export/</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ExportServlet</servlet-name>
+        <url-pattern>/server/Export</url-pattern>
+    </servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>WebUI.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
